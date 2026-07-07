@@ -23,7 +23,7 @@ app.get('/health', (req, res) => {
 });
 
 // We will connect our database and routes right below here next...
-const MONGO_URL = "mongodb+srv://harshit25_db_user:tdTmAi2gCNwffWQm@cluster25.od2fw5g.mongodb.net/?appName=Cluster25";
+const MONGO_URL = process.env.MONGODB_URI;
 
 const { Admin } = require('./db'); // Make sure this import is at the top of index.js if not there
 
